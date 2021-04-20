@@ -146,7 +146,7 @@ trait 对象的生命周期：Box<Foo<'a> + 'a>
 
 ### 智能指针解引用
 
-对智能指针 a: Box<String> 解引用 *a 等价于 *(a.deref())，Box<T> 的 deref 的实现为 fn deref(&self) -> &T { &**self } ，即 *&**&a，同时会引起所有权的转移（解引用移动），目前该行为只支持 Box<T>，使用了 #[lang="owned_box"] 进行标识。
+对智能指针 a: Box<String> 解引用 *a 等价于 *(a.deref())，Box<T> 的 deref 的实现为 `fn deref(&self) -> &T { &**self }` ，即 `*&**&a`，同时会引起所有权的转移（解引用移动），目前该行为只支持 Box<T>，使用了 #[lang="owned_box"] 进行标识。
 
 ### 其他
 
