@@ -1,9 +1,16 @@
 # Restoration Reefs
 
+[TOC]
+
 ## Reef restoration on hyperdrive.
 
-Novel technologies establish a new **paradigm** for ...
+paradigm
+: Novel technologies establish a new **paradigm** for ...
 
-We loaded the boat and headed out to a coral reef near ...
+head out to
+: We loaded the boat and **headed out to** a coral reef near ...
 
-We confirmed that the corals were sexually mature in the weeks prior to the predicted spawning window.
+prior to
+: We confirmed that the corals were sexually mature in the weeks **prior to** the predicted spawning window.
+
+

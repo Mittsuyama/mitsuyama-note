@@ -2,24 +2,29 @@
 
 ## 新时代的语言
 
-设计哲学： 内存安全、零成本抽象、实用性。
+设计哲学
+: 内存安全、零成本抽象、实用性。
 
-常见内存错误： 引用空指针、使用未初始化内存、释放后使用、缓冲区溢出、重复释放。
+常见内存错误
+: 引用空指针、使用未初始化内存、释放后使用、缓冲区溢出、重复释放。
 
-从 Haskell 借鉴的特性： 没有空指针、默认不可变、表达式、高阶函数、代数数据类型、模式匹配、泛型、trait 和关联类型、本地类型推导。
+从 Haskell 借鉴的特性
+: 没有空指针、默认不可变、表达式、高阶函数、代数数据类型、模式匹配、泛型、trait 和关联类型、本地类型推导。
 
-还实现了： 仿射类型（Affine Type），表达 Move 语义；借用；生命周期。支持硬实时系统，从 C++ 借鉴确定性析构、RAII 和智能指针。
+还实现了
+: 仿射类型（Affine Type），表达 Move 语义；借用；生命周期。支持硬实时系统，从 C++ 借鉴确定性析构、RAII 和智能指针。
 
 ## 语言精要
 
-### CTFE
+### 闭包和函数
 
-CTFE（Compile-Time Function Execution，编译时函数执行）。
+CTFE
+: Compile-Time Function Execution，编译时函数执行
 
-使用 const fn foo() -> Type {} 定义编译时就能运行并确定的值，用于比如定义数组：[0; foo()]。由 miri（一个 MIR 解释器）来执行的。
-闭包实现：
+闭包实现
+: Rust 中的闭包实际上就是由一个匿名结构体和 trait 来实现的。
 
-Rust 中的闭包实际上就是由一个匿名结构体和 trait 来实现的。
+使用 `const fn foo() -> Type {}` 定义编译时就能运行并确定的值，用于比如定义数组：`[0; foo()]`。由 miri（一个 MIR 解释器）来执行的。
 
 bool 和整数类型间的转换： as 操作符支持将 bool 类型转成 0 和 1，但是并不支持数转为 bool 类型。
 
@@ -38,7 +43,7 @@ bool 和整数类型间的转换： as 操作符支持将 bool 类型转成 0 �
 
 ### match 引用类型
 
-match &Some("hello".to_string()) 这样的枚举体，Rust 2015 的版本需要使用 &Some(ref s) 这样的语法来解构其中 s 的引用，之后只需要 Some(s) 即可。
+`match &Some("hello".to_string())` 这样的枚举体，Rust 2015 的版本需要使用 &Some(ref s) 这样的语法来解构其中 s 的引用，之后只需要 Some(s) 即可。
 
 ##  类型系统
 
@@ -103,9 +108,9 @@ TraitObject 包括了两个指针：data 指针和 vtable 指针，该名称来�
 
 Rust 中的隐式类型转换基本只有自动解引用。
 
-String + &String 能够运行的原因就在于 String 类型实现了 Deref<Target=str> 这个 Trait。除此之外，Box、Rc、Arc、Vec 等都实现了 Deref trait。
+String + &String 能够运行的原因就在于 String 类型实现了 `Deref<Target=str>` 这个 Trait。除此之外，Box、Rc、Arc、Vec 等都实现了 Deref trait。
 
-match String 字符串时，如 x: String; 需要 match &*x { "xxx" => /* do sth */ } 才能手动解引用为 &str。
+match String 字符串时，如 x: String; 需要 `match &*x { "xxx" => /* do sth */ }` 才能手动解引用为 &str。
 
 ### 当前 trait 系统的不足
 
@@ -121,7 +126,7 @@ match String 字符串时，如 x: String; 需要 match &*x { "xxx" => /* do sth
 
 RAII（Resouce Acquisition Is Initialization），资源获取即初始化。离开作用域时进行析构，同时被叫做作用域界定的资源管理。
 
-利用 Option<Rc<RefCell<Node<T>>>> 来演示 Rust 并不能完全保证内存不会泄露。不过循环引用也可以通过使用 Rc::downgrade 得到 Weak<T> 类型来解决这个问题。
+利用 `Option<Rc<RefCell<Node<T>>>>` 来演示 Rust 并不能完全保证内存不会泄露。不过循环引用也可以通过使用 Rc::downgrade 得到 Weak<T> 类型来解决这个问题。
 
 ## 所有权系统
 
