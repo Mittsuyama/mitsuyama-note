@@ -12,7 +12,9 @@
 
 ## 语言精要
 
-### CTFE（Compile-Time Function Execution，编译时函数执行）
+### CTFE
+
+CTFE（Compile-Time Function Execution，编译时函数执行）。
 
 使用 const fn foo() -> Type {} 定义编译时就能运行并确定的值，用于比如定义数组：[0; foo()]。由 miri（一个 MIR 解释器）来执行的。
 闭包实现：
