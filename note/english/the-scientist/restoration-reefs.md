@@ -64,9 +64,42 @@ devastating, contagious, pathogen
 hermaphrodite
 : Most reef-building corals are **hermaphrodites**, producing both male and female gametes, which are ...
 
-practtitioner, manipulate, degreded, survivorship, demographic
+practitioner, manipulate, degraded, survivorship, demographic
 : The methods with which **practitioners** select, rear, propagate, and **manipulate** corals for restoring **degraded** reefs will have consequences for the **survivorship** of outplants and resilience of restored populations. Understanding the genetic and **demographic** properties that ...
 
 ## The Phages Within
 
+mammalian, gut
+: Bacteria-infecting viruses affect the composition and behavior of microbes in the **mammalian gut** -- and perhaps influence animals' health.
 
+strain (genus), commensal
+: ... what causes some **strains** of normally harmless **commensal** bacteria.
+
+take ... for granted
+: researchers **take their presence for granted**.
+
+put on hold
+: (delay, over-ride) Encouraged by Hooper, he **put his original project on hold** in order to dig depper.
+
+beneficially or detrimentally
+: ... that can influence the outcome on the host -- either **beneficially or detrimentally**.
+
+crop up
+: (pop up, break out in, burst in on) When it crops up, it's not good news.
+
+gummy, mucoid
+: (evil, viscous) Cells with the **gummy mucoid** coating, the researchers noted, were more resistant to phage infection than regular cells were.
+
+be followed by, rebound, follow suit
+: Low bacterial densities at birth **were followed by** decreases in phages, after which the bacteria would **rebound**, and then the phages would **follow suit**.
+
+lyse, lysogeny
+: ... made virus particles **lyse** the bacterium and go on to infect more cells. In the second process, known as **lysogeny**, ...
+
+cholera, toxin
+: (compared with **chlorine**) ... made by some pathogenic _E. Coli_ strains, and **cholora toxin** ...
+
+elsewhere, overtaken, soaring population
+: in Germany, and **elsewhere** before being **overtaken** worldwide by the **soaring population** of antibiotics in the 1940s.
+
+## FROM THE EDITOR: Feeling the Foundation
